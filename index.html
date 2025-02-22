@@ -799,11 +799,191 @@ input {
 .linkedin {
   background-color: #0077b5;
 }
+/* mobile view */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Base responsive adjustments */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Navbar responsive styles */
+        nav {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Hero section responsive styles */
+        .hero {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content, .hero-image {
+            flex: 1 1 300px;
+            max-width: 100%;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 3vw, 24px);
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* Stats section responsive */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 110px;
+            text-align: center;
+        }
+
+        /* Services section responsive */
+        .services-section {
+            grid-template-columns: 1fr;
+            padding: 15px;
+        }
+
+        .services-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Skills grid responsive */
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Works grid responsive */
+        .works-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Contact form responsive */
+        .contact-container {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .form-section, .illustration-section {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Footer responsive */
+        .header {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .experience-badge {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 100px;
+            }
+
+            .experience-badge .number {
+                font-size: 24px;
+            }
+
+            .special-skills {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                margin: 10px;
+            }
+        }
+
+        /* Small screen adjustments */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo"><img src="{% static 'images\Muhammed Ashique M.png' %}" alt="Muhammed Ashique M Logo" width="200">
+        <div class="logo"><img src="images/Muhammed Ashique M.png" alt="Muhammed Ashique M Logo" width="200">
 
         </div>
         <div class="nav-links">
@@ -845,7 +1025,7 @@ input {
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=" alt="Profile Picture" class="profile-image">
+            <img src="images/ashique.jpg" alt="Profile Picture" class="profile-image">
             <div class="experience-badge">
                 <div class="number">2+</div>
                 <div class="text">YEARS OF EXPERIENCE</div>
@@ -853,14 +1033,14 @@ input {
         </div>
     </section>
 
-    <section class="stats">
+    <section class="stats" style="align-items: center;">
         <div class="stat-item">
             <div class="stat-number">10+</div>
             <div class="stat-label">Satisfied Clients</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">20+</div>
-            <div class="stat-label">Successfully Projects</div>
+            <div class="stat-label">Successfull Projects</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">13+</div>
@@ -880,17 +1060,18 @@ input {
         </div>
         <h1 class="intro-title">Hi, I'm Muhammed Ashique. Nice to meet you.</h1>
         <p class="intro-text">
-            With three years of experience as a freelance designer, I have worked remotely with agencies, consulted for startups, and collaborated with talented teams to craft digital products that serve both businesses and consumers.
+           I am a Python Full Stack Developer with expertise in both front-end and back-end development. With a strong foundation in HTML, CSS, JavaScript, and React.js, I create responsive and interactive user interfaces. On the back-end, I specialize in Python and Django, building scalable and efficient web applications.
 
-I bring a blend of confidence and humility, always staying curious and open to new challenges. Passionate about design and innovation, I constantly refine my skills to create impactful and user-friendly experiences.
-        </p>
+My skill set includes database management (PostgreSQL, MySQL), API integration, Git version control, and UI/UX design. I am passionate about problem-solving, optimizing performance, and ensuring seamless user experiences.
+
+Currently, I am working at IMC Business Solutions, where I contribute to developing innovative digital solutions. I am always eager to learn new technologies and take on challenging projects. 🚀
         <a href="#works" class="view-works-btn">VIEW MY WORKS</a>
     </section>
     <section class="services-section">
         <h2 class="services-title">My Quality Services</h2>
         
         <div class="services-image-container">
-            <img src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=" alt="Professional portrait" class="services-image">
+            <img src="images/ashique.jpg" alt="Professional portrait" class="services-image">
         </div>
 
         <div class="services-list">
@@ -900,12 +1081,12 @@ I bring a blend of confidence and humility, always staying curious and open to n
                     <div class="toggle-btn">+</div>
                 </div>
                 <div class="service-content">
-                    <p>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisl condimentum.</p>
+                    <p>I am specialize in full-stack web application development using Python (Django), HTML, CSS, JavaScript, and PostgreSQL. You have experience building dynamic and scalable web applications, integrating APIs, managing databases, and implementing user authentication.</p>
                     <ul>
-                        <li>Mattis nunc sed blandit libero volutpat.</li>
-                        <li>Tortor at risus viverra adipiscing at in tellus.</li>
-                        <li>Purus ut faucibus pulvinar elementum.</li>
-                        <li>Blandit turpis cursus in hac habitasse.</li>
+                        <li>IZONapp – A product and gallery management system.</li>
+                        <li>BookAdvisor – A booking platform for resorts and rooms.</li>
+                        <li>Yasvi TRavels – A booking platform for resorts and rooms.</li>
+                        <li>Fuel Rate Management System – A project for tracking and managing fuel prices globally.</li>
                     </ul>
                 </div>
             </div>
@@ -1000,7 +1181,7 @@ I bring a blend of confidence and humility, always staying curious and open to n
 
     <section class="special-skills">
         <div class="card illustration-card">
-            <img src="/api/placeholder/400/400" alt="Mobile UI illustration with rocket" class="illustration">
+            <img src="images/ashique.jpg" alt="Mobile UI illustration with rocket" class="illustration">
         </div>
 
         <div class="card content-card">
@@ -1096,7 +1277,7 @@ I bring a blend of confidence and humility, always staying curious and open to n
           <p class="header-text">Block content. Lorem ipsum dolor sit ame.</p>
         </div>
         
-        <div class="logo">logo</div>
+        <div class="logo"><img src="images/Muhammed Ashique M.png" alt=""></div>
         
         <div class="social-icons">
           <a href="#" class="social-icon facebook" aria-label="Facebook">

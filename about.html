@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>MUHAMMED ASHIQUE M</title>
     <style>
         * {
@@ -431,6 +432,187 @@ h2 {
 .linkedin {
   background-color: #0077b5;
 }
+
+/* mobile view and responsive */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Base responsive adjustments */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Navbar responsive styles */
+        nav {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Hero section responsive styles */
+        .hero {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content, .hero-image {
+            flex: 1 1 300px;
+            max-width: 100%;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 3vw, 24px);
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* Stats section responsive */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Services section responsive */
+        .services-section {
+            grid-template-columns: 1fr;
+            padding: 15px;
+        }
+
+        .services-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Skills grid responsive */
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Works grid responsive */
+        .works-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Contact form responsive */
+        .contact-container {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .form-section, .illustration-section {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Footer responsive */
+        .header {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .experience-badge {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 100px;
+            }
+
+            .experience-badge .number {
+                font-size: 24px;
+            }
+
+            .special-skills {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                margin: 10px;
+            }
+        }
+
+        /* Small screen adjustments */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         </style>
 </head>
 <body>
@@ -448,24 +630,32 @@ h2 {
         
         <div class="hero">
             <div class="hero-content">
-                <h1>I'm Matt</h1>
-                <p class="subtitle">Freelance Designer & Developer</p>
+                <h1>I'm Muhammed Ashique M</h1>
+                <p class="subtitle">Python Full Stack Developer</p>
                 <a href="#" class="cta-button">HIRE ME NOW</a>
                 <div class="social-links">
-                    <a href="#" class="social-icon">
-                        <img src="/api/placeholder/20/20" alt="Facebook">
+                    <a href="https://www.facebook.com/yourpage" class="social-icon" target="_blank" style="color: white">
+                        <i class="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="social-icon">
-                        <img src="/api/placeholder/20/20" alt="Twitter">
+    
+                    <a href="https://www.instagram.com/yourprofile" class="social-icon" target="_blank" style="color: white">
+                        <i class="fa-brands fa-instagram"></i> <!-- Instagram Icon -->
                     </a>
-                    <a href="#" class="social-icon">
-                        <img src="/api/placeholder/20/20" alt="Instagram">
+    
+                    <a href="https://www.linkedin.com/in/yourprofile" class="social-icon" target="_blank" style="color: white">
+                        <i class="fa-brands fa-linkedin"></i> <!-- LinkedIn Icon -->
+                    </a>
+                    <a href="https://www.naukri.com/mnjuser/profile" class="social-icon" target="_blank" style="color: white">
+                        <i class="fa-solid fa-n"></i>
+                    </a>
+                    <a href="https://wa.me/918129139506" class="social-icon" target="_blank" style="color: white;">
+                        <i class="fa-brands fa-whatsapp"></i> <!-- WhatsApp Icon -->
                     </a>
                 </div>
                 <p class="attribution">Image from <a href="https://www.freepik.com">Freepik</a></p>
             </div>
             <div class="hero-image">
-                <img src="/api/placeholder/500/500" alt="Professional portrait">
+                <img src="images/ashique.jpg" alt="Professional portrait">
             </div>
         </div>
     </div>
@@ -477,7 +667,7 @@ h2 {
                 <svg class="skill-icon" viewBox="0 0 24 24" fill="white">
                     <path d="M15 5H9v2h6V5zm6 14H3V3h18v16zm0-18H3c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2z"/>
                 </svg>
-                <div class="skill-title">Figma</div>
+                <div class="skill-title">Python</div>
                 <div class="skill-description">Sample text. Click to select the Text Element.</div>
             </div>
             
@@ -485,7 +675,7 @@ h2 {
                 <svg class="skill-icon" viewBox="0 0 24 24" fill="white">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                 </svg>
-                <div class="skill-title">WordPress</div>
+                <div class="skill-title">Django</div>
                 <div class="skill-description">Sample text. Click to select the Text Element.</div>
             </div>
             
@@ -493,7 +683,7 @@ h2 {
                 <svg class="skill-icon" viewBox="0 0 24 24" fill="white">
                     <path d="M12 2L1 8l11 6 9-4.91V17h2V7L12 2z"/>
                 </svg>
-                <div class="skill-title">React.js</div>
+                <div class="skill-title">HTML</div>
                 <div class="skill-description">Sample text. Click to select the Text Element.</div>
             </div>
             
@@ -501,7 +691,7 @@ h2 {
                 <svg class="skill-icon" viewBox="0 0 24 24" fill="white">
                     <path d="M3 3h18v18H3V3zm16.5 15.5V7.5h-2v7h-7v2h9z"/>
                 </svg>
-                <div class="skill-title">HTML</div>
+                <div class="skill-title">CSS</div>
                 <div class="skill-description">Sample text. Click to select the Text Element.</div>
             </div>
         </div>
@@ -513,56 +703,56 @@ h2 {
         
         <div class="experience-item">
             <div class="experience-left">
-                <div class="job-title">Web Developer</div>
-                <div class="job-date">April 2021 - 2023 (Present)</div>
+                <div class="job-title">Pyhton Developer</div>
+                <div class="job-date">October 2024 - 2025 (Present)</div>
             </div>
             <div class="experience-right">
-                <div class="company-name">Squarespace</div>
-                <div class="job-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</div>
-                <div class="location">New York</div>
+                <div class="company-name">IMC Bussiness Solution</div>
+                <div class="job-description">C Business Solutions is a technology-driven company specializing in software development, digital solutions, and IT consulting. It focuses on delivering innovative and customized solutions to businesses, enhancing efficiency and digital transformation.</div>
+                <div class="location">Kalpetta,Wayanad,Kerala</div>
             </div>
         </div>
         
         <div class="experience-item">
             <div class="experience-left">
-                <div class="job-title">Front-End Development</div>
-                <div class="job-date">Jun 2018 - Feb 2021</div>
+                <div class="job-title">Pyhton Developer Intern</div>
+                <div class="job-date">Jun 2024 - Oct 2024</div>
             </div>
             <div class="experience-right">
-                <div class="company-name">SiriusXM</div>
-                <div class="job-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</div>
-                <div class="location">New York</div>
+                <div class="company-name">Ociuz Infotech Pvt Ltd</div>
+                <div class="job-description">Ociuz Infotech Pvt Ltd is a dynamic Information Technology company based in Thrissur, Kerala, India. Established on February 3, 2021, by a group of experienced web designers, developers, software engineers, and trainers, the company aims to deliver innovative IT solutions across various sectors, including government, telecom, and education.</div>
+                <div class="location">Thrissur, Kerala</div>
             </div>
         </div>
         
         <div class="experience-item">
             <div class="experience-left">
-                <div class="job-title">Web Designer</div>
-                <div class="job-date">Aug 2016 - Jun 2018</div>
+                <div class="job-title">Pyhton Developer Intern</div>
+                <div class="job-date">May 2023 - Aug 2023</div>
             </div>
             <div class="experience-right">
-                <div class="company-name">Florida University</div>
-                <div class="job-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</div>
-                <div class="location">Gainesville</div>
+                <div class="company-name">Inmakes Infotech Pvt. Ltd.</div>
+                <div class="job-description">Inmakes Infotech Pvt. Ltd. is a software development and web development company headquartered in Kochi, Kerala, India. They offer a range of services, including web and mobile app development, digital marketing, branding, and software support.</div>
+                <div class="location">Kochi, Ernakulam,Kerala</div>
             </div>
         </div>
     </div>
 
     <div class="stats-container">
         <div class="stats-left">
-            <h2>25+ Years of Experience</h2>
-            <p class="description">Sample text. Click to select the Text Element. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <h2>3+ Years of Experience</h2>
+            <p class="description">Python Full Stack Developer with expertise in Django, PostgreSQL, HTML, CSS, and JavaScript. Experienced in building dynamic web applications, managing databases, and integrating APIs. Passionate about backend development and continuously improving technical skills.</p>
             <a href="#" class="cta-button">HIRE ME NOW</a>
         </div>
         
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number">1200</div>
+                <div class="stat-number">20+</div>
                 <div class="stat-label">Satisfied Clients</div>
             </div>
             
             <div class="stat-item">
-                <div class="stat-number">5490</div>
+                <div class="stat-number">20+</div>
                 <div class="stat-label">Successfully Projects</div>
             </div>
             
@@ -584,7 +774,7 @@ h2 {
           <p class="header-text">Block content. Lorem ipsum dolor sit ame.</p>
         </div>
         
-        <div class="logo">logo</div>
+        <div class="logo"><img src="images/Muhammed Ashique M.png" alt=""></div>
         
         <div class="social-icons">
           <a href="#" class="social-icon facebook" aria-label="Facebook">

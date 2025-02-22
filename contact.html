@@ -267,6 +267,186 @@ body {
 .linkedin {
   background-color: #0077b5;
 }
+/* mobile responsive */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Base responsive adjustments */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Navbar responsive styles */
+        nav {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Hero section responsive styles */
+        .hero {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content, .hero-image {
+            flex: 1 1 300px;
+            max-width: 100%;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 3vw, 24px);
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* Stats section responsive */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Services section responsive */
+        .services-section {
+            grid-template-columns: 1fr;
+            padding: 15px;
+        }
+
+        .services-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Skills grid responsive */
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Works grid responsive */
+        .works-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Contact form responsive */
+        .contact-container {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .form-section, .illustration-section {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Footer responsive */
+        .header {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .experience-badge {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 100px;
+            }
+
+            .experience-badge .number {
+                font-size: 24px;
+            }
+
+            .special-skills {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                margin: 10px;
+            }
+        }
+
+        /* Small screen adjustments */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -284,12 +464,11 @@ body {
       
       <div class="faq-container">
         <div class="faq-content">
-          <h1 class="faq-title">FAQ</h1>
+          <h1 class="faq-title">Get In Touch</h1>
           <p class="faq-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="credit">Image from <a href="#">Freepik</a></p>
         </div>
         <div class="image-container">
-          <img src="/api/placeholder/500/600" alt="FAQ Section Image" class="rounded-image">
+          <img src="images/ashique.jpg" alt="FAQ Section Image" class="rounded-image">
         </div>
       </div>
 
@@ -308,10 +487,9 @@ body {
         </div>
         <button type="submit" class="submit-button">SUBMIT</button>
       </form>
-      <p class="credit">Image from <a href="#">Freepik</a></p>
     </div>
     <div class="image-section">
-      <img src="/api/placeholder/400/400" alt="Person working on laptop" class="illustration">
+      <img src="https://cdni.iconscout.com/illustration/free/thumb/free-man-working-on-laptop-illustration-download-in-svg-png-gif-file-formats--using-male-people-illustrations-4243574.png?f=webp" alt="Person working on laptop" class="illustration">
     </div>
   </div>
 

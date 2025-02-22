@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUHAMMED ASHIQUE M</title>
     <style>
         * {
@@ -47,6 +49,20 @@
             gap: 60px;
             padding: 60px 0;
         }
+        @media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image, .content {
+        width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
         
         .profile-image {
             width: 50%;
@@ -333,6 +349,187 @@ h2 {
 .linkedin {
   background-color: #0077b5;
 }
+
+/* mobile view and responsive */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Base responsive adjustments */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Navbar responsive styles */
+        nav {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Hero section responsive styles */
+        .hero {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content, .hero-image {
+            flex: 1 1 300px;
+            max-width: 100%;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 3vw, 24px);
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* Stats section responsive */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Services section responsive */
+        .services-section {
+            grid-template-columns: 1fr;
+            padding: 15px;
+        }
+
+        .services-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Skills grid responsive */
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Works grid responsive */
+        .works-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Contact form responsive */
+        .contact-container {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .form-section, .illustration-section {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Footer responsive */
+        .header {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .experience-badge {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 100px;
+            }
+
+            .experience-badge .number {
+                font-size: 24px;
+            }
+
+            .special-skills {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                margin: 10px;
+            }
+        }
+
+        /* Small screen adjustments */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         </style>
 </head>
 <body>
@@ -349,7 +546,7 @@ h2 {
         
         <div class="hero">
             <div class="profile-image">
-                <img src="https://img.freepik.com/premium-photo/handsome-young-boy-with-look-camera_985092-1706.jpg?uid=R185470380&ga=GA1.1.429714915.1680186335&semt=ais_hybrid" alt="Profile photo">
+                <img src="images/ashique.jpg" alt="Profile photo">
             </div>
             
             <div class="content">
@@ -358,18 +555,26 @@ h2 {
                 <a href="#" class="cta-button">HIRE ME NOW</a>
                 
                 <div class="social-links">
-                    <a href="#" class="social-icon">
-                        <img src="/api/placeholder/20/20" alt="Facebook">
+                    <a href="https://www.facebook.com/yourpage" class="social-icon" target="_blank" style="color: white">
+                        <i class="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="social-icon">
-                        <img src="/api/placeholder/20/20" alt="Twitter">
+    
+                    <a href="https://www.instagram.com/yourprofile" class="social-icon" target="_blank" style="color: white">
+                        <i class="fa-brands fa-instagram"></i> <!-- Instagram Icon -->
                     </a>
-                    <a href="#" class="social-icon">
-                        <img src="/api/placeholder/20/20" alt="Instagram">
+    
+                    <a href="https://www.linkedin.com/in/yourprofile" class="social-icon" target="_blank" style="color: white">
+                        <i class="fa-brands fa-linkedin"></i> <!-- LinkedIn Icon -->
+                    </a>
+                    <a href="https://www.naukri.com/mnjuser/profile" class="social-icon" target="_blank" style="color: white">
+                        <i class="fa-solid fa-n"></i>
+                    </a>
+                    <a href="https://wa.me/918129139506" class="social-icon" target="_blank" style="color: white;">
+                        <i class="fa-brands fa-whatsapp"></i> <!-- WhatsApp Icon -->
                     </a>
                 </div>
                 
-                <p class="attribution">Image from <a href="https://www.freepik.com">Freepik</a></p>
+                
             </div>
         </div>
     </div>
@@ -383,7 +588,7 @@ h2 {
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 19V5h14v14H5z"/>
                     <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
                 </svg>
-                <div class="skill-title">Figma</div>
+                <div class="skill-title">Pyhton</div>
                 <div class="skill-description">Sample text. Click to select the Text Element.</div>
             </div>
     
@@ -392,7 +597,7 @@ h2 {
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                     <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
                 </svg>
-                <div class="skill-title">WordPress</div>
+                <div class="skill-title">Django</div>
                 <div class="skill-description">Sample text. Click to select the Text Element.</div>
             </div>
     
@@ -401,7 +606,7 @@ h2 {
                     <path d="M12 2L1 8l11 6 9-4.91V17h2V7L12 2z"/>
                     <path d="M17 14.5v7h2v-7h-2zm-6-3v10h2v-10h-2zm-6 6v4h2v-4H5z"/>
                 </svg>
-                <div class="skill-title">React.js</div>
+                <div class="skill-title">HTML</div>
                 <div class="skill-description">Sample text. Click to select the Text Element.</div>
             </div>
     
@@ -410,7 +615,7 @@ h2 {
                     <path d="M3 3h18v18H3V3zm16.5 15.5V7.5h-2v7h-7v2h9z"/>
                     <path d="M7 7h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
                 </svg>
-                <div class="skill-title">HTML</div>
+                <div class="skill-title">CSS</div>
                 <div class="skill-description">Sample text. Click to select the Text Element.</div>
             </div>
         </div>
@@ -476,7 +681,7 @@ h2 {
           <p class="header-text">Block content. Lorem ipsum dolor sit ame.</p>
         </div>
         
-        <div class="logo">logo</div>
+        <div class="logo"><img src="images/Muhammed Ashique M.png" alt=""></div>
         
         <div class="social-icons">
           <a href="#" class="social-icon facebook" aria-label="Facebook">
