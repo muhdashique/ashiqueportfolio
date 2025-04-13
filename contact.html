@@ -2,458 +2,453 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MUHAMMED ASHIQUE M</title>
-  <style>
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      color: #999;
-      font-size: 1.5rem;
-      font-weight: 500;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      color: #666;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .nav-links a:hover {
-      color: #333;
-    }
-
-    .faq-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 40px;
-      gap: 60px;
-    }
-
-    .faq-content {
-      flex: 1;
-    }
-
-    .faq-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 24px;
-      color: #333;
-    }
-
-    .faq-text {
-      color: #666;
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 24px;
-    }
-
-    .credit {
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    .credit a {
-      color: #666;
-      text-decoration: underline;
-    }
-
-    .image-container {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .rounded-image {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      border-radius: 40px;
-      background: #f5f5f5;
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: white;
-    }
-
-    /* contact form */
-    .contact-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 60px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-
-    .form-section {
-      flex: 1;
-    }
-
-    .contact-title {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 40px;
-      color: #333;
-    }
-
-    .form-group {
-      margin-bottom: 24px;
-    }
-
-    .form-label {
-      display: block;
-      margin-bottom: 8px;
-      color: #555;
-      font-size: 1rem;
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 12px 0;
-      border: none;
-      border-bottom: 1px solid #ddd;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.3s ease;
-    }
-
-    .form-input:focus {
-      border-bottom-color: #6B7FFF;
-    }
-
-    .form-input::placeholder {
-      color: #999;
-    }
-
-    .submit-button {
-      width: 100%;
-      padding: 16px;
-      background-color: #6B7FFF;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 32px;
-    }
-
-    .submit-button:hover {
-      background-color: #5666CC;
-    }
-
-    .credit {
-      margin-top: 24px;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    .credit a {
-      color: #666;
-      text-decoration: underline;
-    }
-
-    .image-section {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .illustration {
-      max-width: 400px;
-      height: auto;
-    }
-
-    @media (max-width: 768px) {
-      .contact-container {
-        flex-direction: column;
-        padding: 40px 20px;
-      }
-
-      .image-section {
-        order: -1;
-      }
-
-      .illustration {
-        max-width: 300px;
-      }
-    }
-
-    /* footer section */
-    .header {
-      background-color: #333;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-
-    .header-content {
-      max-width: 400px;
-    }
-
-    .header-title {
-      font-size: 1.5rem;
-      margin: 0 0 10px 0;
-      color: white;
-    }
-
-    .header-text {
-      font-size: 1rem;
-      margin: 0;
-      color: #ccc;
-      line-height: 1.4;
-    }
-
-    .logo {
-      color: #fff;
-      font-size: 2rem;
-      opacity: 0.8;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .social-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-
-    .social-icon:hover {
-      transform: translateY(-2px);
-    }
-
-    .facebook {
-      background-color: #3b5998;
-    }
-
-    .twitter {
-      background-color: #1da1f2;
-    }
-
-    .instagram {
-      background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-    }
-
-    .linkedin {
-      background-color: #0077b5;
-    }
-
-    /* mobile responsive */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Base responsive adjustments */
-    body {
-      overflow-x: hidden;
-    }
-
-    /* Navbar responsive styles */
-    nav {
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .logo img {
-      max-width: 180px;
-      height: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    /* Hero section responsive styles */
-    .hero {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 15px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .hero-content,
-    .hero-image {
-      flex: 1 1 300px;
-      max-width: 100%;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 5vw, 48px);
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-size: clamp(18px, 3vw, 24px);
-    }
-
-    .profile-image {
-      width: 100%;
-      max-width: 350px;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    /* Stats section responsive */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* Services section responsive */
-    .services-section {
-      grid-template-columns: 1fr;
-      padding: 15px;
-    }
-
-    .services-image {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* Skills grid responsive */
-    .skills-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 15px;
-    }
-
-    /* Works grid responsive */
-    .works-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 15px;
-    }
-
-    /* Contact form responsive */
-    .contact-container {
-      flex-direction: column;
-      padding: 20px;
-    }
-
-    .form-section,
-    .illustration-section {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    /* Footer responsive */
-    .header {
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
-    }
-
-    .social-icons {
-      justify-content: center;
-    }
-
-    /* Mobile-specific adjustments */
-    @media (max-width: 768px) {
-      .nav-links {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .hero-content {
-        order: 2;
-      }
-
-      .hero-image {
-        order: 1;
-      }
-
-      .experience-badge {
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 100px;
-      }
-
-      .experience-badge .number {
-        font-size: 24px;
-      }
-
-      .special-skills {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        margin: 10px;
-      }
-    }
-
-    /* Small screen adjustments */
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 28px;
-      }
-
-      .hero h2 {
-        font-size: 18px;
-      }
-
-      .stat-number {
-        font-size: 32px;
-      }
-
-      .works-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUHAMMED ASHIQUE MOKKATH</title>
+    <style>
+        .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #999;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #333;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 40px;
+  gap: 60px;
+}
+
+.faq-content {
+  flex: 1;
+}
+
+.faq-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.faq-text {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.credit {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.credit a {
+  color: #666;
+  text-decoration: underline;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.rounded-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 40px;
+  background: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: white;
+}
+        /* contact form */
+        .contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.form-section {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-bottom-color: #6B7FFF;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #6B7FFF;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 32px;
+}
+
+.submit-button:hover {
+  background-color: #5666CC;
+}
+
+.credit {
+  margin-top: 24px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.credit a {
+  color: #666;
+  text-decoration: underline;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.illustration {
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  
+  .image-section {
+    order: -1;
+  }
+  
+  .illustration {
+    max-width: 300px;
+  }
+}
+/* footer section */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header-content {
+  max-width: 400px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+.header-text {
+  font-size: 1rem;
+  margin: 0;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+/* mobile responsive */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Base responsive adjustments */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Navbar responsive styles */
+        nav {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Hero section responsive styles */
+        .hero {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content, .hero-image {
+            flex: 1 1 300px;
+            max-width: 100%;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 3vw, 24px);
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* Stats section responsive */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Services section responsive */
+        .services-section {
+            grid-template-columns: 1fr;
+            padding: 15px;
+        }
+
+        .services-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Skills grid responsive */
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Works grid responsive */
+        .works-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Contact form responsive */
+        .contact-container {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .form-section, .illustration-section {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Footer responsive */
+        .header {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .experience-badge {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 100px;
+            }
+
+            .experience-badge .number {
+                font-size: 24px;
+            }
+
+            .special-skills {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                margin: 10px;
+            }
+        }
+
+        /* Small screen adjustments */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
